@@ -1,4 +1,4 @@
-package com.vanethos.minimize_app
+package de.eyev.minimize_app
 
 import android.app.Activity
 import androidx.annotation.NonNull;

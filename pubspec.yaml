@@ -1,11 +1,11 @@
 name: minimize_app
 description: A flutter plugin to minimize the app
-version: 1.0.0-nullsafety.0
+version: 1.0.0
 homepage: https://github.com/Vanethos/minimize_app_plugin
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: ">=1.12.0"
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
@@ -19,7 +19,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.vanethos.minimize_app
+        package: de.eyev.minimize_app
         pluginClass: MinimizeAppPlugin
       ios:
         pluginClass: MinimizeAppPlugin

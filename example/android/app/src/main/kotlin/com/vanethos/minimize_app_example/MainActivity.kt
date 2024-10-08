@@ -1,4 +1,4 @@
-package com.vanethos.minimize_app_example
+package de.eyev.minimize_app_example
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
