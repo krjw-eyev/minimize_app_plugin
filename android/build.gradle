@@ -2,14 +2,14 @@ group 'de.eyev.minimize_app'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '2.0.20'
+    ext.kotlin_version = '1.7.10'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.6.1'
+        classpath 'com.android.tools.build:gradle:7.3.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -27,6 +27,14 @@ apply plugin: 'kotlin-android'
 android {
     namespace "de.eyev.minimize_app"
     compileSdk 34
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
@@ -41,4 +49,11 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+def localDependenciesFile = file('build.local.gradle')
+if (localDependenciesFile.exists()) {
+    apply from: localDependenciesFile
+} else {
+    println 'Local dependencies file not found. Skipping...'
 }
